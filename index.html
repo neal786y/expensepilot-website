@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExpensePilot – Smart Expense Tracker</title>
+  <style>
+    :root {
+      --primary: #3574F0;
+      --on-primary: #ffffff;
+      --primary-container: #E7F0FF;
+      --on-primary-container: #0B2B6B;
+
+      --secondary: #6C737C;
+      --on-secondary: #ffffff;
+      --secondary-container: #E9ECF1;
+      --on-secondary-container: #2C3137;
+
+      --tertiary: #2DBD8D;
+      --on-tertiary: #002018;
+      --tertiary-container: #C9F2E5;
+      --on-tertiary-container: #073D2F;
+
+      --background: #ffffff;
+      --on-background: #1F2328;
+
+      --surface: #ffffff;
+      --on-surface: #1F2328;
+
+      --surface-variant: #F0F2F5;
+      --on-surface-variant: #51565C;
+
+      --outline: #CACDD2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      color: var(--on-background);
+      background-color: var(--background);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: var(--on-primary);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 { margin: 0; font-size: 1.5rem; }
+
+    .cta-btn {
+      background: var(--tertiary);
+      color: var(--on-primary);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover { background: #25a87a; }
+
+    section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--on-primary-container);
+    }
+
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+
+    .feature-card {
+      background: var(--surface-variant);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .feature-card h3 { margin-top: 0; color: var(--primary); }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+
+    .screenshots img { width: 100%; max-width: 180px; border-radius: 12px; border: 1px solid var(--outline); }
+
+    footer { background: var(--secondary-container); color: var(--on-secondary-container); text-align: center; padding: 1.5rem; margin-top: 2rem; }
+    footer a { color: var(--primary); text-decoration: none; margin: 0 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ExpensePilot</h1>
+    <a class="cta-btn" href="https://play.google.com/store/apps/details?id=com.example.expensepilot" target="_blank">
+      Download
+    </a>
+  </header>
+
+  <!-- Features Section -->
+  <section>
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature-card"><h3>Track Expenses</h3><p>Easily add daily transactions and categorize your spending.</p></div>
+      <div class="feature-card"><h3>Budgets</h3><p>Set monthly budgets and monitor spending against limits.</p></div>
+      <div class="feature-card"><h3>Offline First</h3><p>Your data is stored locally for speed and privacy. Sync optional.</p></div>
+      <div class="feature-card"><h3>Cloud Backup</h3><p>Subscribe to securely sync data with cloud and access anywhere.</p></div>
+      <div class="feature-card"><h3>Analytics</h3><p>Visual charts and reports to understand your spending habits.</p></div>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section>
+    <h2>App Screenshots</h2>
+    <div class="screenshots">
+      <img src="images/Dashboard.png" alt="Dashboard">
+      <img src="images/Analytics-1.png" alt="Analytics 1">
+      <img src="images/Analytics-2.png" alt="Analytics 2">
+      <img src="images/Budget_Analysis.png" alt="Budget Analysis ">
+      <img src="images/Transactions.png" alt="Transactions">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section>
+    <h2>About ExpensePilot</h2>
+    <p>ExpensePilot is your personal finance companion, designed to simplify expense tracking 
+      and help you take control of your money. With an offline-first approach, your data 
+      stays private on your device, while optional cloud sync ensures you never lose track.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ExpensePilot. All rights reserved.</p>
+    <p>
+      <a href="privacy.html" target="_blank">Privacy Policy</a> |
+      <a href="terms.html" target="_blank">Terms of Use</a>
+    </p>
+  </footer>
+</body>
+</html>
