@@ -33,18 +33,21 @@
       --outline: #CACDD2;
     }
 
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Roboto, Arial, sans-serif;
       color: var(--on-background);
       background-color: var(--background);
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
       background: var(--primary);
       color: var(--on-primary);
-      padding: 1rem 2rem;
+      padding: 0.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -55,16 +58,27 @@
 
     header h1 { margin: 0; font-size: 1.5rem; }
 
+    nav a {
+      color: var(--on-primary);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: var(--tertiary); }
+
     .cta-btn {
       background: var(--tertiary);
       color: var(--on-primary);
       border: none;
-      padding: 0.75rem 1.5rem;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
-      font-size: 1rem;
+      font-size: 0.9rem;
       cursor: pointer;
       text-decoration: none;
       transition: background 0.3s ease;
+      margin-left: 1rem;
     }
 
     .cta-btn:hover { background: #25a87a; }
@@ -101,14 +115,26 @@
       text-decoration: none;
       margin: 0 0.5rem;
     }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { margin-top: 0.5rem; display: flex; flex-wrap: wrap; }
+      nav a { margin: 0.3rem 1rem 0.3rem 0; }
+      .cta-btn { margin-left: 0; margin-top: 0.5rem; }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>ExpensePilot</h1>
-    <a class="cta-btn" href="https://play.google.com/store/apps/details?id=com.example.expensepilot" target="_blank">
-      Download
-    </a>
+    <nav>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#screenshots">Screenshots</a>
+      <a href="index.html#about">About</a>
+      <a href="privacy.html" target="_self">Privacy</a>
+      <a href="terms.html" target="_self">Terms</a>
+      <a class="cta-btn" href="https://play.google.com/store/apps/details?id=com.example.expensepilot" target="_blank">Get on Play Store</a>
+    </nav>
   </header>
 
   <section>
